@@ -1,6 +1,3 @@
-
-from email.policy import default
-from turtle import update
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 from E_college.helper import AppHelpers
@@ -22,7 +19,7 @@ class UserNotificationSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserNotification
         fields = ('user_id', 'message', 'types')
-    
+
     def get_types(self,obj):
         return AppHelpers.get_user_notification_type_name(obj.types)
 
@@ -38,15 +35,15 @@ class StatusupdateSerializer(serializers.ModelSerializer):
 class StudentMenuUpdateSerializer(serializers.ModelSerializer):
     status = serializers.IntegerField(write_only=True, default=MealStatus.ACCEPTED.value)
 
-    class Meta: 
+    class Meta:
         model = StudentMeal
         fields = ('status',)
 
 class StudentMenuTakenSerializer(serializers.ModelSerializer):
     status = serializers.IntegerField(write_only=True, default=MealStatus.TAKEN.value)
 
-    class Meta: 
+    class Meta:
         model = StudentMeal
         fields = ('status',)
-    
+
 
