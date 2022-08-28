@@ -1,1 +1,1 @@
-web: gunicorn E-college.wsgi
+web: gunicorn E_college.wsgi
