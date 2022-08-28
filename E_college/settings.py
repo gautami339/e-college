@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-oq!h_qtmp%)y#zx$8=q@v_$y%*k+#ti51_0v8-i8^1of@u*g%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['e-college-app.herokuapp.com']
 
 APPEND_SLASH = True
 
