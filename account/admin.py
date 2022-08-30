@@ -8,7 +8,7 @@ from account.models import *
 class UserAdmin(admin.ModelAdmin):
     list_display = ('username',)
     radio_fields = {'role': admin.HORIZONTAL , 'status': admin.HORIZONTAL}
-    
+
 
 admin.site.register(User,UserAdmin)
 class MealAdmin(admin.ModelAdmin):
@@ -22,5 +22,6 @@ class ItemAdmin(admin.ModelAdmin):
     radio_fields = {'user': admin.HORIZONTAL}
 
 admin.site.register(Item, ItemAdmin)
+admin.site.register(UserRelation)
 
 
